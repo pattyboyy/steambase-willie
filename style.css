@@ -1,0 +1,418 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+header {
+    background-color: #1e88e5;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #42a5f5;
+}
+
+.full-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero {
+    background-image: url('assets/Screenshot 2024-03-26 093529.png');
+}
+
+#about {
+    background-image: url('assets/Screenshot 2024-03-26 093636.png');
+}
+
+#guarantees {
+    background-image: url('assets/Screenshot 2024-03-26 093727.png');
+}
+
+#how-to-buy {
+    background-image: url('assets/Screenshot 2024-03-26 170946.png');
+}
+
+#tokenomics {
+    background-image: url('assets/Screenshot 2024-03-26 171256.png');
+}
+
+#contract {
+    background-image: url('assets/Screenshot 2024-03-26 164819.png');
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-box h1,
+.text-box h2,
+.text-box h3,
+.text-box p {
+    color: #fff;
+}
+
+.text-box .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #1e88e5;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    animation: pulseButton 1s infinite;
+    margin-top: 20px;
+}
+
+.text-box .cta-button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated-title {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInTitle 1s ease forwards;
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-content,
+.buy-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about-text,
+.buy-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.about-image,
+.buy-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img,
+.buy-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.guarantee-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.card {
+    background-color: #1e88e5;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-height: 100px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.how-to-buy-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.step {
+    flex-basis: 48%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #fff;
+}
+
+.step a {
+    color: #42a5f5;
+}
+
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.grid-item {
+    background-color: #1e88e5;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+}
+
+.grid-item img {
+    max-height: 100px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1e88e5;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: translateY(-5px);
+}
+
+.social-media img {
+    max-height: 30px;
+}
+
+.how-to-buy-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.step {
+    flex-basis: 48%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #fff;
+}
+
+.step a {
+    color: #42a5f5;
+}
+
+.contract-address {
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* ... remaining CSS code ... */
+
+/* Improved Media Queries */
+@media screen and (max-width: 1024px) {
+    .about-content,
+    .buy-content {
+        flex-direction: column-reverse; /* Ensures content stacks well on tablets */
+    }
+
+    .guarantee-cards {
+        flex-direction: column; /* Stacks guarantee cards vertically */
+    }
+
+    .how-to-buy-steps .step,
+    .tokenomics-grid .grid-item {
+        flex-basis: 100%; /* Full width for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .animated-title {
+        font-size: 30px; /* Adjust title size for mobile devices */
+    }
+
+    .text-box {
+        padding: 20px; /* Reduce padding for text boxes */
+    }
+
+    .container,
+    .text-box,
+    nav ul li a {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .tokenomics-grid {
+        grid-template-columns: 1fr; /* Adjust grid for single column layout on mobile */
+    }
+
+    nav ul {
+        display: none; /* Optionally hide the navigation menu or switch to a hamburger menu */
+    }
+
+    /* Additional responsive adjustments as needed */
+}
+
+/* Additional styles for larger screens can go here */
+@media screen and (min-width: 1200px) {
+    /* Styles for larger desktop screens if necessary */
+}
+
+/* Continue with your CSS as previously defined */
+/* ... previous CSS code ... */
+
+/* Previous CSS code... */
+
+/* Add your fade-in animation styles here */
+section {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: adds a slight slide-up effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Adjust timing as needed */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+}
+
+/* Ensure to close your CSS file with any remaining styles needed */
