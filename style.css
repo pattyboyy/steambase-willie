@@ -76,20 +76,20 @@ nav ul li a:hover {
 
 .about-text-box,
 .text-box {
-    background-color: #1e88e5;
+    background-color: #0d4c83;
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    color: #fff;
+    color: #0a2562;
 }
 
 .text-box h1,
 .text-box h2,
 .text-box h3,
 .text-box p {
-    color: #fff;
+    color: #0a2562;
 }
 
 .text-box .cta-button {
@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #add8e6;
+    background-color: #1e88e5;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -186,16 +186,16 @@ nav ul li a:hover {
 }
 
 .step h3 {
-    color: #ffffff;
+    color: #51F521;
     margin-bottom: 10px;
 }
 
 .step p {
-    color: #fff;
+    color: #51F521;
 }
 
 .step a {
-    color: #ffffff;
+    color: #51F521;
 }
 
 .decorative-image {
@@ -214,7 +214,7 @@ nav ul li a:hover {
 }
 
 .grid-item {
-    background-color: #1e88e5;
+    background-color: #51F521;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
