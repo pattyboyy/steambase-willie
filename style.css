@@ -513,5 +513,61 @@ footer {
 }
 
 /* Continue with your CSS as previously defined */
-/* ... previous CSS code ... */
+/* ... previous CSS code ... *//* ... existing CSS before media queries ... */
 
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .container,
+    .text-box,
+    .full-page {
+        padding: 15px; /* Adjust padding for small screens */
+    }
+
+    .text-box {
+        margin: 0; /* Remove any margin for the text box to utilize full width */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Reduce the font size for headers */
+    }
+
+    .full-page {
+        height: auto; /* Make full-page height automatic to contain content */
+        min-height: 100vh; /* Ensure sections are at least the height of the viewport */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the navigation items */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Add some space between stacked items */
+    }
+
+    .guarantee-cards, .how-to-buy-steps, .tokenomics-grid {
+        flex-direction: column; /* Stack these elements on smaller screens */
+    }
+
+    .step, .card, .grid-item {
+        width: 100%; /* Full width on smaller screens for these elements */
+        margin-bottom: 20px; /* Add space between stacked elements */
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    /* Adjust styles for tablet devices if necessary */
+}
+
+/* Small Desktops */
+@media (max-width: 992px) {
+    /* Adjust styles for small desktops if necessary */
+}
+
+/* Large Desktops */
+@media (max-width: 1200px) {
+    /* Adjust styles for large desktops if necessary */
+}
+
+/* ... continue with existing CSS if needed ... */
