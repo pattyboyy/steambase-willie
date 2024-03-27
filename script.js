@@ -5,6 +5,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
+        // Close the mobile menu dropdown
+        mobileMenuDropdown.style.display = 'none';
     });
 });
 
@@ -34,9 +36,7 @@ const steamAnimation = document.querySelector('.steam-animation');
 function createSteam() {
     const steam = document.createElement('div');
     steam.classList.add('steam');
-    steam.style.left = Math.random() * 100 + '%';
-    steam.style.animationDuration = Math.random() * 2 + 3 + 's';
-    steam.style.opacity = Math.random();
+    steam.style.left = Math.random() * (window.innerWidth - 400) + 'px';
     steamAnimation.appendChild(steam);
 
     setTimeout(() => {
@@ -45,3 +45,11 @@ function createSteam() {
 }
 
 setInterval(createSteam, 200);
+
+// Mobile Menu
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+const mobileMenuDropdown = document.querySelector('.mobile-menu-dropdown');
+
+mobileMenuIcon.addEventListener('click', () => {
+    mobileMenuDropdown.style.display = mobileMenuDropdown.style.display === 'none' ? 'block' : 'none';
+});

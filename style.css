@@ -3,13 +3,12 @@
 
 /* Reset default styles */
 body {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Roboto', sans-serif;
-   background-color: #e0f0ff; /* Soft blue background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0f0ff; /* Soft blue background */
 }
-
 .container {
    max-width: 1200px;
    margin: 0 auto;
@@ -314,33 +313,44 @@ footer {
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: none; /* Added to prevent interaction with the steam */
- }
- 
- .steam {
+    pointer-events: none; /* Prevent interaction with the steam */
+}
+
+.steam {
     position: absolute;
-    bottom: 0;
-    width: 10px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
+    bottom: -50px; /* Start steam below the viewport */
+    left: 0;
+    width: 0; /* Initial width is 0 */
+    height: 100px; /* Adjust the height as needed */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 60%); /* Gradient for steam */
     border-radius: 50%;
     opacity: 0;
-    animation: steam-rise 5s infinite;
- }
- 
- @keyframes steam-rise {
+    animation: steam-rise 5s infinite; /* Animate the steam */
+}
+
+@keyframes steam-rise {
     0% {
-        bottom: 0;
+        bottom: -50px; /* Start below the viewport */
+        width: 0; /* Start with zero width */
         opacity: 0;
     }
-    50% {
-        opacity: 1;
+    20% {
+        bottom: 0; /* Move to the bottom of the viewport */
+        width: 100px; /* Increase the width */
+        opacity: 0.6; /* Increase opacity */
+    }
+    80% {
+        bottom: 80%; /* Move up */
+        width: 300px; /* Increase the width further */
+        opacity: 0.2; /* Decrease opacity */
     }
     100% {
-        bottom: 100%;
-        opacity: 0;
+        bottom: 100%; /* Move off the top of the viewport */
+        width: 400px; /* Maximum width */
+        opacity: 0; /* Fade out */
     }
- }
+}
+
 
 .how-to-buy-section {
    margin-top: 40px;
@@ -396,4 +406,55 @@ footer {
    max-height: 150px;
    max-width: 100%;
    margin-bottom: 20px;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: none;
+    position: relative;
+    z-index: 1001; /* Ensure the menu is above the header */
+}
+
+.mobile-menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-dropdown li {
+    margin-bottom: 10px;
+}
+
+.mobile-menu-dropdown a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
 }
