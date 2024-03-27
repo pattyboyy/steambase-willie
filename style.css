@@ -1,644 +1,322 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@700&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, sans-serif; /* A standard, legible web-safe font */
-}
-
-/* Color scheme */
-:root {
-    --primary-color: #007bff; /* Primary color */
-    --secondary-color: #6c757d; /* Secondary color */
-    --accent-color: #17a2b8; /* Accent color for CTAs */
-    --text-color: #333; /* Main text color */
-    --background-color: #fff; /* Main background color */
-}
-
-/* Buttons and links */
-a, .btn {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-.btn {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: darken(var(--primary-color), 10%);
-}
-
-/* Consistent styling for navigation and footer */
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-footer {
-    background-color: var(--secondary-color);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    .full-page {
-        height: auto; /* Change the height to auto for smaller screens */
-        padding: 50px 0; /* Add some padding to ensure content doesn't touch the edges */
-    }
-
-    .text-box {
-        padding: 20px; /* Reduce padding inside text boxes to fit smaller screens */
-    }
-
-    .container, .hero-content, .about-content, .guarantee-cards, .how-to-buy-steps, .tokenomics-grid {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-    }
-
-    nav ul li {
-        margin-bottom: 20px; /* Add space between nav items when stacked */
-    }
-
-    .nav, .footer-content {
-        text-align: center; /* Center navigation and footer content on smaller screens */
-    }
-}
-
-/* Further responsive adjustments as needed */
-@media (max-width: 480px) {
-    .nav ul, .footer-content {
-        flex-direction: column; /* Ensure elements stack vertically in very small viewports */
-    }
-}
-
-/* Ensure you replace the placeholder values and classes with those that are specific to your website's structure and design needs. */
-
-
-
-
-/* Additional styles for consistency can be added here, based on the specific needs of your website */
-
-
-/* Headings - Adjusting sizes for a better hierarchy */
-h1 {
-    font-size: 2.5rem; /* Larger for primary headings */
-}
-
-h2 {
-    font-size: 2rem; /* Slightly smaller for secondary headings */
-}
-
-h3 {
-    font-size: 1.75rem; /* Tertiary headings */
-}
-
-
 /* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+{ margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: 'Comic Sans MS', cursive;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
+font-family: 'Comic Sans MS', cursive;
+background-color: #000;
+background: repeating-linear-gradient(45deg, #000, #000 10px, #1e88e5 10px, #1e88e5 20px);
+color: #fff;
+line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
 }
 
-
 header {
-    background-color: #1e88e5;
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+background-color: #1e88e5;
+padding: 20px;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 999;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo h1 {
+color: #fff;
+font-size: 24px;
+margin: 0;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    max-height: 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+list-style: none;
+display: flex;
 }
 
 nav ul li {
-    margin-left: 20px;
+margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #42a5f5;
+color: #42a5f5;
 }
 
 .full-page {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
-#hero {
-    background-image: url('assets/Screenshot 2024-03-26 093529.png');
-}
-
-#about {
-    background-image: url('assets/Screenshot 2024-03-26 093636.png');
-}
-
-#guarantees {
-    background-image: url('assets/Screenshot 2024-03-26 093727.png');
-}
-
-#how-to-buy {
-    background-image: url('assets/Screenshot 2024-03-26 170946.png');
-}
-
-#tokenomics {
-    background-image: url('assets/Screenshot 2024-03-26 171256.png');
-}
-
-#contract {
-    background-image: url('assets/Screenshot 2024-03-26 164819.png');
-}
-
-.about-text-box {
-    background-color: rgba(30, 136, 229, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-text-box .text-box {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    max-width: none;
-    margin: 0;
-    text-align: inherit;
-}
-
-.buy-text-box {
-    background-color: rgba(30, 136, 229, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.buy-text-box .text-box {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    max-width: none;
-    margin: 0;
-    text-align: inherit;
+.about-text-box,
+.text-box {
+background-color: #1e88e5;
+padding: 30px;
+border-radius: 10px;
+max-width: 800px;
+margin: 0 auto;
+text-align: center;
+color: #fff;
 }
 
 .text-box h1,
 .text-box h2,
 .text-box h3,
 .text-box p {
-    color: #fff;
+color: #fff;
 }
 
 .text-box .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #fff;
-    color: #1e88e5;
-    text-decoration: none;
-    font-size: 24px;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
-    animation: pulseButton 1s infinite;
-    margin-top: 20px;
+display: inline-block;
+padding: 15px 30px;
+background-color: #fff;
+color: #1e88e5;
+text-decoration: none;
+font-size: 24px;
+border-radius: 50px;
+transition: transform 0.3s ease;
+animation: pulseButton 1s infinite;
+margin-top: 20px;
 }
 
 .text-box .cta-button:hover {
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
 @keyframes pulseButton {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+0% { transform: scale(1); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
 }
 
 .animated-title {
-    font-size: 60px;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fadeInTitle 1s ease forwards;
+font-size: 60px;
+font-weight: bold;
+text-transform: uppercase;
+position: relative;
+display: inline-block;
+color: #fff;
+text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+animation: fadeInTitle 1s ease forwards;
 }
 
 @keyframes fadeInTitle {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about-content,
-.buy-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.about-text,
-.buy-text {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.about-image,
-.buy-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img,
-.buy-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+0% { opacity: 0; transform: translateY(-50px); }
+100% { opacity: 1; transform: translateY(0); }
 }
 
 .guarantee-cards {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 60px;
+display: flex;
+justify-content: space-around;
+margin-top: 60px;
 }
 
 .card {
-    background-color: rgba(30, 136, 229, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease;
+background-color: #add8e6;
+padding: 30px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+transform: translateY(-10px);
 }
 
 .card img {
-    max-height: 100px;
-    margin-bottom: 20px;
+max-height: 100px;
+margin-bottom: 20px;
 }
 
 .card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+font-size: 24px;
+margin-bottom: 10px;
 }
 
 .how-to-buy-steps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 40px;
 }
 
 .step {
-    flex-basis: 48%;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+flex-basis: 48%;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 20px;
+border-radius: 10px;
+margin-bottom: 20px;
 }
 
 .step h3 {
-    color: #1e88e5;
-    margin-bottom: 10px;
+color: #1e88e5;
+margin-bottom: 10px;
 }
 
 .step p {
-    color: #fff;
+color: #fff;
 }
 
 .step a {
-    color: #42a5f5;
+color: #42a5f5;
+}
+
+.decorative-image {
+max-width: 300px;
+max-height: 200px;
+margin-bottom: 1rem;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .tokenomics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 60px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+margin-top: 60px;
 }
 
 .grid-item {
-    background-color: rgba(30, 136, 229, 0.7);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease;
+background-color: #add8e6;
+padding: 30px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
 }
 
 .grid-item:hover {
-    transform: translateY(-10px);
+transform: translateY(-10px);
 }
 
 .grid-item img {
-    max-height: 100px;
-    margin-bottom: 20px;
+max-height: 100px;
+margin-bottom: 20px;
 }
 
 footer {
-    background-color: #1e88e5;
-    padding: 20px;
-    text-align: center;
+background-color: #1e88e5;
+padding: 20px;
+text-align: center;
 }
 
 .footer-content {
-    display: flex;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.social-media {
+margin-bottom: 20px;
+}
+
+.social-media a {
+display: inline-block;
+margin: 0 10px;
+transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+transform: translateY(-5px);
+}
+
+.social-media img {
+max-height: 30px;
+}
+
+.contract-address {
+font-size: 24px;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 10px 20px;
+border-radius: 5px;
+display: inline-block;
+margin-top: 20px;
+}
+
+/* Improved Media Queries */
+@media screen and (max-width: 1024px) {
+.guarantee-cards {
+flex-direction: column;
+}
+
+
+Copy code
+.how-to-buy-steps .step,
+.tokenomics-grid .grid-item {
+    flex-basis: 100%;
+}
+
+nav ul {
     flex-direction: column;
     align-items: center;
 }
 
-.social-media {
-    margin-bottom: 20px;
+.nav ul li {
+    margin: 10px 0;
+}
 }
 
-.social-media a {
-    display: inline-block;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+@media screen and (max-width: 768px) {
+.animated-title {
+font-size: 30px;
 }
 
-.social-media a:hover {
-    transform: translateY(-5px);
-}
 
-.social-media img {
-    max-height: 30px;
-}
-
-.how-to-buy-steps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.step {
-    flex-basis: 48%;
-    background-color: rgba(255, 255, 255, 0.1);
+Copy code
+.text-box {
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
-.step h3 {
-    color: #1e88e5;
-    margin-bottom: 10px;
+.container,
+.text-box,
+nav ul li a {
+    padding: 0 10px;
 }
 
-.step p {
-    color: #fff;
+.tokenomics-grid {
+    grid-template-columns: 1fr;
 }
 
-.step a {
-    color: #42a5f5;
+nav ul {
+    display: none;
 }
-
-.contract-address {
-    font-size: 24px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* ... remaining CSS code ... */
-
-/* Improved Media Queries */
-@media screen and (max-width: 1024px) {
-    .about-content,
-    .buy-content {
-        flex-direction: column-reverse; /* Ensures content stacks well on tablets */
-    }
-
-    .guarantee-cards {
-        flex-direction: column; /* Stacks guarantee cards vertically */
-    }
-
-    .how-to-buy-steps .step,
-    .tokenomics-grid .grid-item {
-        flex-basis: 100%; /* Full width for smaller screens */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center;
-    }
-
-    .nav ul li {
-        margin: 10px 0; /* Adjust spacing for vertical layout */
-    }
 }
 
 @media screen and (max-width: 768px) {
-    .animated-title {
-        font-size: 30px; /* Adjust title size for mobile devices */
-    }
-
-    .text-box {
-        padding: 20px; /* Reduce padding for text boxes */
-    }
-
-    .container,
-    .text-box,
-    nav ul li a {
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-
-    .tokenomics-grid {
-        grid-template-columns: 1fr; /* Adjust grid for single column layout on mobile */
-    }
-
-    nav ul {
-        display: none; /* Optionally hide the navigation menu or switch to a hamburger menu */
-    }
-
-    /* Additional responsive adjustments as needed */
+.full-page {
+min-height: 100vh;
+height: auto;
+padding: 20px 0;
+background-attachment: scroll;
+background-size: cover;
+background-position: center;
 }
-
-/* Additional styles for larger screens can go here */
-@media screen and (min-width: 1200px) {
-    /* Styles for larger desktop screens if necessary */
-}
-
-/* Continue with your CSS as previously defined */
-/* ... previous CSS code ... *//* ... existing CSS before media queries ... */
-
-/* Responsive adjustments for .full-page sections */
-@media screen and (max-width: 768px) {
-    .full-page {
-        min-height: 100vh; /* Ensure the section covers the viewport height */
-        height: auto; /* Allows the section to grow based on content size */
-        padding: 20px 0; /* Add top and bottom padding for smaller screens */
-        background-attachment: scroll; /* Change or remove fixed background for better mobile support */
-        background-size: cover; /* Keep 'cover' to fill the section or switch to 'contain' to ensure the whole image is visible */
-        background-position: center; /* Adjust as needed to focus on the important part of the image */
-    }
-
-    /* Adjust text sizes for better readability on small screens */
-    .text-box h1, .text-box h2, .text-box h3, .text-box p {
-        font-size: adjust to your preference; /* Example: 16px for p, larger for h1-h3 */
-    }
-}
-
-/* Ensure adjustments for very small devices as well */
-/* ... existing CSS before media queries ... */
-
-/* Improved Media Queries */
-@media screen and (max-width: 1024px) {
-    .about-content,
-    .buy-content {
-        flex-direction: column-reverse; /* Ensures content stacks well on tablets */
-    }
-
-    .guarantee-cards {
-        flex-direction: column; /* Stacks guarantee cards vertically */
-    }
-
-    .how-to-buy-steps .step,
-    .tokenomics-grid .grid-item {
-        flex-basis: 100%; /* Full width for smaller screens */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center;
-    }
-
-    .nav ul li {
-        margin: 10px 0; /* Adjust spacing for vertical layout */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .animated-title {
-        font-size: 30px; /* Adjust title size for mobile devices */
-    }
-
-    .text-box {
-        padding: 20px; /* Reduce padding for text boxes */
-    }
-
-    .container,
-    .text-box,
-    nav ul li a {
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-
-    .tokenomics-grid {
-        grid-template-columns: 1fr; /* Adjust grid for single column layout on mobile */
-    }
-
-    nav ul {
-        display: none; /* Optionally hide the navigation menu or switch to a hamburger menu */
-    }
-
-    /* Additional responsive adjustments as needed */
-}
-
-/* Additional styles for larger screens can go here */
-@media screen and (min-width: 1200px) {
-    /* Styles for larger desktop screens if necessary */
-}
-
-/* Continue with your CSS as previously defined */
-/* ... previous CSS code ... *//* ... existing CSS before media queries ... */
-
-/* Responsive adjustments for .full-page sections */
-@media screen and (max-width: 768px) {
-    .full-page {
-        min-height: 100vh; /* Ensure the section covers the viewport height */
-        height: auto; /* Allows the section to grow based on content size */
-        padding: 20px 0; /* Add top and bottom padding for smaller screens */
-        background-attachment: scroll; /* Change or remove fixed background for better mobile support */
-        background-size: cover; /* Keep 'cover' to fill the section or switch to 'contain' to ensure the whole image is visible */
-        background-position: center; /* Adjust as needed to focus on the important part of the image */
-    }
-
-    /* Adjust text sizes for better readability on small screens */
-    .text-box h1, .text-box h2, .text-box h3, .text-box p {
-        font-size: adjust to your preference; /* Example: 16px for p, larger for h1-h3 */
-    }
-}
-
-/* Ensure adjustments for very small devices as well */
-@media screen and (max-width: 480px) {    /* Add your CSS rules here */
 }
