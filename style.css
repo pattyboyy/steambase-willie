@@ -515,59 +515,24 @@ footer {
 /* Continue with your CSS as previously defined */
 /* ... previous CSS code ... *//* ... existing CSS before media queries ... */
 
-/* Mobile Phones */
-@media (max-width: 600px) {
-    .container,
-    .text-box,
+/* Responsive adjustments for .full-page sections */
+@media screen and (max-width: 768px) {
     .full-page {
-        padding: 15px; /* Adjust padding for small screens */
+        min-height: 100vh; /* Ensure the section covers the viewport height */
+        height: auto; /* Allows the section to grow based on content size */
+        padding: 20px 0; /* Add top and bottom padding for smaller screens */
+        background-attachment: scroll; /* Change or remove fixed background for better mobile support */
+        background-size: cover; /* Keep 'cover' to fill the section or switch to 'contain' to ensure the whole image is visible */
+        background-position: center; /* Adjust as needed to focus on the important part of the image */
     }
 
-    .text-box {
-        margin: 0; /* Remove any margin for the text box to utilize full width */
-    }
-
-    h1, h2, h3 {
-        font-size: 1.5rem; /* Reduce the font size for headers */
-    }
-
-    .full-page {
-        height: auto; /* Make full-page height automatic to contain content */
-        min-height: 100vh; /* Ensure sections are at least the height of the viewport */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack the navigation items */
-        padding: 0;
-    }
-
-    nav ul li {
-        margin-bottom: 10px; /* Add some space between stacked items */
-    }
-
-    .guarantee-cards, .how-to-buy-steps, .tokenomics-grid {
-        flex-direction: column; /* Stack these elements on smaller screens */
-    }
-
-    .step, .card, .grid-item {
-        width: 100%; /* Full width on smaller screens for these elements */
-        margin-bottom: 20px; /* Add space between stacked elements */
+    /* Adjust text sizes for better readability on small screens */
+    .text-box h1, .text-box h2, .text-box h3, .text-box p {
+        font-size: adjust to your preference; /* Example: 16px for p, larger for h1-h3 */
     }
 }
 
-/* Tablets */
-@media (max-width: 768px) {
-    /* Adjust styles for tablet devices if necessary */
+/* Ensure adjustments for very small devices as well */
+@media screen and (max-width: 480px) {
+    /* Further refine sizes and padding for elements within .full-page sections */
 }
-
-/* Small Desktops */
-@media (max-width: 992px) {
-    /* Adjust styles for small desktops if necessary */
-}
-
-/* Large Desktops */
-@media (max-width: 1200px) {
-    /* Adjust styles for large desktops if necessary */
-}
-
-/* ... continue with existing CSS if needed ... */
