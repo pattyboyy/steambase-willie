@@ -209,13 +209,40 @@ nav ul li a:hover {
     background-image: url('assets/Screenshot 2024-03-26 164819.png');
 }
 
-.text-box {
-    background-color: rgba(0, 0, 0, 0.7);
+.about-text-box {
+    background-color: rgba(30, 136, 229, 0.7);
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+}
+
+.about-text-box .text-box {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+    text-align: inherit;
+}
+
+.buy-text-box {
+    background-color: rgba(30, 136, 229, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buy-text-box .text-box {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+    text-align: inherit;
 }
 
 .text-box h1,
@@ -311,7 +338,7 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #1e88e5;
+    background-color: rgba(30, 136, 229, 0.7);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -369,7 +396,7 @@ nav ul li a:hover {
 }
 
 .grid-item {
-    background-color: #1e88e5;
+    background-color: rgba(30, 136, 229, 0.7);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -533,6 +560,85 @@ footer {
 }
 
 /* Ensure adjustments for very small devices as well */
-@media screen and (max-width: 480px) {
-    /* Further refine sizes and padding for elements within .full-page sections */
+/* ... existing CSS before media queries ... */
+
+/* Improved Media Queries */
+@media screen and (max-width: 1024px) {
+    .about-content,
+    .buy-content {
+        flex-direction: column-reverse; /* Ensures content stacks well on tablets */
+    }
+
+    .guarantee-cards {
+        flex-direction: column; /* Stacks guarantee cards vertically */
+    }
+
+    .how-to-buy-steps .step,
+    .tokenomics-grid .grid-item {
+        flex-basis: 100%; /* Full width for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .animated-title {
+        font-size: 30px; /* Adjust title size for mobile devices */
+    }
+
+    .text-box {
+        padding: 20px; /* Reduce padding for text boxes */
+    }
+
+    .container,
+    .text-box,
+    nav ul li a {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .tokenomics-grid {
+        grid-template-columns: 1fr; /* Adjust grid for single column layout on mobile */
+    }
+
+    nav ul {
+        display: none; /* Optionally hide the navigation menu or switch to a hamburger menu */
+    }
+
+    /* Additional responsive adjustments as needed */
+}
+
+/* Additional styles for larger screens can go here */
+@media screen and (min-width: 1200px) {
+    /* Styles for larger desktop screens if necessary */
+}
+
+/* Continue with your CSS as previously defined */
+/* ... previous CSS code ... *//* ... existing CSS before media queries ... */
+
+/* Responsive adjustments for .full-page sections */
+@media screen and (max-width: 768px) {
+    .full-page {
+        min-height: 100vh; /* Ensure the section covers the viewport height */
+        height: auto; /* Allows the section to grow based on content size */
+        padding: 20px 0; /* Add top and bottom padding for smaller screens */
+        background-attachment: scroll; /* Change or remove fixed background for better mobile support */
+        background-size: cover; /* Keep 'cover' to fill the section or switch to 'contain' to ensure the whole image is visible */
+        background-position: center; /* Adjust as needed to focus on the important part of the image */
+    }
+
+    /* Adjust text sizes for better readability on small screens */
+    .text-box h1, .text-box h2, .text-box h3, .text-box p {
+        font-size: adjust to your preference; /* Example: 16px for p, larger for h1-h3 */
+    }
+}
+
+/* Ensure adjustments for very small devices as well */
+@media screen and (max-width: 480px) {    /* Add your CSS rules here */
 }
