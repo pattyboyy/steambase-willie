@@ -34,12 +34,7 @@ header {
     align-items: center;
 }
 
-.text-wrapper {
-    background-color: inherit;
-    padding: 10px;
-    mix-blend-mode: difference;
-    color: #fff;
-}
+
 .logo h1 {
     color: #fff;
     font-size: 24px;
@@ -220,7 +215,7 @@ nav ul li a:hover {
 }
 
 .grid-item {
-    background-color: #51F521;
+    background-color: #2720ff;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
