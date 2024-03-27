@@ -28,19 +28,20 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-const steamBackground = document.querySelector('.steam-background');
+// Steam animation
+const steamAnimation = document.querySelector('.steam-animation');
 
 function createSteam() {
-  const steam = document.createElement('div');
-  steam.classList.add('steam');
-  steam.style.left = Math.random() * 100 + '%';
-  steam.style.animationDuration = Math.random() * 2 + 3 + 's';
-  steam.style.opacity = Math.random();
-  steamBackground.appendChild(steam);
+    const steam = document.createElement('div');
+    steam.classList.add('steam');
+    steam.style.left = Math.random() * 100 + '%';
+    steam.style.animationDuration = Math.random() * 2 + 3 + 's';
+    steam.style.opacity = Math.random();
+    steamAnimation.appendChild(steam);
 
-  setTimeout(() => {
-    steam.remove();
-  }, 5000);
+    setTimeout(() => {
+        steam.remove();
+    }, 5000);
 }
 
 setInterval(createSteam, 200);
