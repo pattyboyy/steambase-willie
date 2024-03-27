@@ -27,3 +27,20 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+const steamBackground = document.querySelector('.steam-background');
+
+function createSteam() {
+  const steam = document.createElement('div');
+  steam.classList.add('steam');
+  steam.style.left = Math.random() * 100 + '%';
+  steam.style.animationDuration = Math.random() * 2 + 3 + 's';
+  steam.style.opacity = Math.random();
+  steamBackground.appendChild(steam);
+
+  setTimeout(() => {
+    steam.remove();
+  }, 5000);
+}
+
+setInterval(createSteam, 200);
