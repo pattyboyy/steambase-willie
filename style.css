@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background-color: #1e88e5;
+    background-color: #4c98da;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -77,7 +77,7 @@ nav ul li a:hover {
 
 .about-text-box,
 .text-box {
-    background-color: #0d4c83;
+    background-color: #69b3f4;
     padding: 30px;
     border-radius: 10px;
     max-width: 800px;
